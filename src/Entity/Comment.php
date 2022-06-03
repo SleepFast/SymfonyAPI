@@ -11,13 +11,13 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=CommentRepository::class)
- * @ApiResource(itemOperations={
+ * @ApiResource(collectionOperations={"get","post"},
+ * itemOperations={
  *  "put",
  *  "patch",
  *  "get",
  * },
- * shortName="Commentaire",
- * denormalizationContext={"groups"={"writemichel"}})
+ * denormalizationContext={"groups"={"writemichel"}}
  * )
  */
 class Comment
